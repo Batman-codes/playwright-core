@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"  
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0  
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">  
+
+    <modelVersion>4.0.0</modelVersion>  
+    <groupId>org.testleaf</groupId>  
+    <artifactId>playwright-core</artifactId>  
+    <version>1.0.2</version>  
+
+    <properties>
+        <java.version>22</java.version>
+        <core.interfaces.version>1.0.3</core.interfaces.version>
+        <playwright.version>1.48.0</playwright.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>  
+        <dependency>  
+            <groupId>org.testleaf</groupId>  
+            <artifactId>core-interfaces</artifactId>  
+            <version>${core.interfaces.version}</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>com.microsoft.playwright</groupId>  
+            <artifactId>playwright</artifactId>  
+            <version>${playwright.version}</version>  
+        </dependency>  
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>  
+                <artifactId>maven-compiler-plugin</artifactId>  
+                <version>3.11.0</version>  
+                <configuration>  
+                    <source>${java.version}</source>  
+                    <target>${java.version}</target>  
+                </configuration>  
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
